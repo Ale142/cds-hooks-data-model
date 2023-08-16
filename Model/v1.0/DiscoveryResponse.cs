@@ -1,10 +1,9 @@
-using System.Text.Json.Serialization;
-
-namespace v1_0
+using Newtonsoft.Json;
+namespace Model.CdsHooks.v1
 {
     public class DiscoveryResponse
     {
-        [JsonPropertyName("services")]
+        [JsonProperty("services")]
         public List<CdsService> Services { get; set; }
 
         [JsonConstructor]

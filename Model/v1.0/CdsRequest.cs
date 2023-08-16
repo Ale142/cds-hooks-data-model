@@ -1,44 +1,43 @@
 
-using System.Text.Json.Serialization;
-
-namespace v1_0
+using Newtonsoft.Json;
+namespace Model.CdsHooks.v1
 {
-    public class CdsRequestBody
+    public class CdsRequest
     {
-        [JsonPropertyName("hook")]
+        [JsonProperty("hook")]
         public string Hook { get; set; }
 
-        [JsonPropertyName("hookInstance")]
+        [JsonProperty("hookInstance")]
         public string HookInstance { get; set; }
 
-        [JsonPropertyName("fhirServer"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("fhirServer", NullValueHandling = NullValueHandling.Ignore)]
         public string? FhirServer { get; set; }
 
-        [JsonPropertyName("fhirAuthorization"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("fhirAuthorization", NullValueHandling = NullValueHandling.Ignore)]
         public FhirAuthorizationOptions? FhirAuthorization { get; set; }
 
-        [JsonPropertyName("context")]
+        [JsonProperty("context")]
         public object Context { get; set; }
 
-        [JsonPropertyName("prefetch"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("prefetch", NullValueHandling = NullValueHandling.Ignore)]
         public object? Prefetch { get; set; }
     }
 
     public class FhirAuthorizationOptions
     {
-        [JsonPropertyName("access_token")]
+        [JsonProperty("access_token")]
         public string acces_token { get; set; }
 
-        [JsonPropertyName("token_type")]
+        [JsonProperty("token_type")]
         public string token_type { get; set; }
 
-        [JsonPropertyName("expires_in")]
+        [JsonProperty("expires_in")]
         public int expires_in { get; set; }
 
-        [JsonPropertyName("scope")]
+        [JsonProperty("scope")]
         public string scope { get; set; }
 
-        [JsonPropertyName("subject")]
+        [JsonProperty("subject")]
         public string subject { get; set; }
 
         public FhirAuthorizationOptions(string acces_token, string token_type, int expires_in, string scope, string subject)

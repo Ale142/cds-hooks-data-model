@@ -1,40 +1,40 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
-namespace v1_0
+namespace Model.CdsHooks.v1
 {
     public class Card
     {
-        [JsonPropertyName("summary")]
+        [JsonProperty("summary")]
         public string Summary { get; set; }
 
-        [JsonPropertyName("detail"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("detail", NullValueHandling = NullValueHandling.Ignore)]
         public string? Detail { get; set; }
 
-        [JsonPropertyName("indicator"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("indicator", NullValueHandling = NullValueHandling.Ignore)]
         public string Indicator { get; set; }
 
-        [JsonPropertyName("source")]
+        [JsonProperty("source")]
         public Source Source { get; set; }
 
-        [JsonPropertyName("suggestions"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("suggestions", NullValueHandling = NullValueHandling.Ignore)]
         public List<Suggestion>? Suggestions { get; set; }
 
-        [JsonPropertyName("selectionBehavior"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("selectionBehavior", NullValueHandling = NullValueHandling.Ignore)]
         public string? selectionBehavior { get; set; }
 
-        [JsonPropertyName("links"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("links", NullValueHandling = NullValueHandling.Ignore)]
         public List<Link>? Links { get; set; }
     }
 
     public class Source
     {
-        [JsonPropertyName("label")]
+        [JsonProperty("label")]
         public string Label { get; set; }
 
-        [JsonPropertyName("url"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("url", NullValueHandling = NullValueHandling.Ignore)]
         public string? Url { get; set; }
 
-        [JsonPropertyName("icon"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("icon", NullValueHandling = NullValueHandling.Ignore)]
         public string? Icon { get; set; }
 
         public Source(string label, string? url, string? icon)
@@ -51,13 +51,13 @@ namespace v1_0
 
     public class Suggestion
     {
-        [JsonPropertyName("label")]
+        [JsonProperty("label")]
         public string Label { get; set; }
 
-        [JsonPropertyName("uuid"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("uuid", NullValueHandling = NullValueHandling.Ignore)]
         public string? UUID { get; set; }
 
-        [JsonPropertyName("actions"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("actions", NullValueHandling = NullValueHandling.Ignore)]
         public List<Action>? Actions { get; set; }
 
         public Suggestion(string label, string? uuid, List<Action>? actions)
@@ -75,13 +75,13 @@ namespace v1_0
 
     public class Action
     {
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public string Type { get; set; }
 
-        [JsonPropertyName("description")]
+        [JsonProperty("description")]
         public string Description { get; set; }
 
-        [JsonPropertyName("resource"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("resource", NullValueHandling = NullValueHandling.Ignore)]
         public object? Resource { get; set; }
 
         public Action(string type, string description, object? resource)
@@ -100,16 +100,16 @@ namespace v1_0
 
     public class Link
     {
-        [JsonPropertyName("label")]
+        [JsonProperty("label")]
         public string Label { get; set; }
 
-        [JsonPropertyName("url")]
+        [JsonProperty("url")]
         public string Url { get; set; }
 
-        [JsonPropertyName("type")]
+        [JsonProperty("type")]
         public string Type { get; set; }
 
-        [JsonPropertyName("appContext"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("appContext", NullValueHandling = NullValueHandling.Ignore)]
         public string? AppContext { get; set; }
 
         public Link(string label, string url, string type, string? appContext)

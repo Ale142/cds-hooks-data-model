@@ -1,10 +1,9 @@
-using System.Text.Json.Serialization;
-
-namespace v1_0
+using Newtonsoft.Json;
+namespace Model.CdsHooks.v1
 {
     public class CdsResponse
     {
-        [JsonPropertyName("cards")]
+        [JsonProperty("cards")]
         public List<Card> Cards { get; set; }
     }
 }

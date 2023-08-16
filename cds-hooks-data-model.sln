@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data-model", "src\data-model.csproj", "{1B22C8E2-327D-43A5-9D45-3D17519205F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data-model", "Model\data-model.csproj", "{1B22C8E2-327D-43A5-9D45-3D17519205F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{62A2F90F-1267-4FCF-AA7A-1059D8B1E151}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "Test\test.csproj", "{62A2F90F-1267-4FCF-AA7A-1059D8B1E151}"
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution

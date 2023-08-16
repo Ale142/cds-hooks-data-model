@@ -1,22 +1,21 @@
-using System.Text.Json.Serialization;
-
-namespace v1_0
+using Newtonsoft.Json;
+namespace Model.CdsHooks.v1
 {
     public class CdsService
     {
-        [JsonPropertyName("hook")]
+        [JsonProperty("hook")]
         public string Hook { get; set; }
 
-        [JsonPropertyName("title"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("title", NullValueHandling = NullValueHandling.Ignore)]
         public string? Title { get; set; }
 
-        [JsonPropertyName("description")]
+        [JsonProperty("description")]
         public string Description { get; set; }
 
-        [JsonPropertyName("id")]
+        [JsonProperty("id")]
         public string Id { get; set; }
 
-        [JsonPropertyName("prefetch"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        [JsonProperty("prefetch", NullValueHandling = NullValueHandling.Ignore)]
         public object? Prefetch { get; set; }
 
         [JsonConstructor]
