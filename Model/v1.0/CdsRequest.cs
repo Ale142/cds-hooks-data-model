@@ -2,6 +2,10 @@
 using Newtonsoft.Json;
 namespace Model.CdsHooks.v1
 {
+    /// <summary>
+    /// The CdsRequest class represents the content of the HTTP POST request JSON object that the client shall use.
+    /// https://cds-hooks.hl7.org/1.0/#calling-a-cds-service
+    /// </summary>
     public class CdsRequest
     {
         [JsonProperty("hook")]

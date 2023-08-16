@@ -1,6 +1,10 @@
 using Newtonsoft.Json;
 namespace Model.CdsHooks.v1
 {
+    /// <summary>
+    /// The CdsService class represents a CdsService object.
+    /// https://cds-hooks.hl7.org/1.0/#response
+    /// </summary>
     public class CdsService
     {
         [JsonProperty("hook")]

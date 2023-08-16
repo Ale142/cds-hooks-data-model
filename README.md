@@ -1,4 +1,4 @@
-![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+![Static Badge](https://img.shields.io/badge/.NET_Core_6.0-8A2BE2?logoColor=8A2BE2) ![Static Badge](https://img.shields.io/badge/C%23-8A2BE2?logoColor=8A2BE2) ![Nuget](https://img.shields.io/nuget/v/cds-hooks-data-model) ![Nuget](https://img.shields.io/nuget/dt/cds-hooks-data-model)
 
 # cds-hooks-data-model
 
@@ -10,5 +10,11 @@ CDS Hooks version supported
 | ------- | ------------------ | ------------------ |
 | 1.0     | :white_check_mark: | :white_check_mark: |
 | 2.0     | :construction:     | :construction:     |
+
+## Installation
+
+```bash
+dotnet add package cds-hooks-data-model --version 1.0.0
+```
 
 [LICENSE](./LICENSE)

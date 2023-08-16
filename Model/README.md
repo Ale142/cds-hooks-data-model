@@ -1,1 +1,0 @@
-# CDS-hooks Data Model

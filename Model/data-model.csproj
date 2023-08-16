@@ -1,12 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <PackageId>cds-hooks-data-model</PackageId>
+    <Version>1.0.0</Version>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>data_model</RootNamespace>
+    <RootNamespace>Model</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>Cds-hooks-data-model</PackageId>
     <Version>1.0.0</Version>
     <Authors>Alessandro Bacci @Ale142</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />

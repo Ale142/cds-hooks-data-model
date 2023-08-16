@@ -2,6 +2,10 @@ using Newtonsoft.Json;
 
 namespace Model.CdsHooks.v1
 {
+    /// <summary>
+    /// The Card class represents a Card object.
+    /// https://cds-hooks.hl7.org/1.0/#card-attributes
+    /// </summary>
     public class Card
     {
         [JsonProperty("summary")]
@@ -26,6 +30,10 @@ namespace Model.CdsHooks.v1
         public List<Link>? Links { get; set; }
     }
 
+    /// <summary>
+    /// The Source class represents a Source object.
+    /// https://cds-hooks.hl7.org/1.0/#source
+    /// </summary>
     public class Source
     {
         [JsonProperty("label")]
@@ -49,6 +57,10 @@ namespace Model.CdsHooks.v1
         }
     }
 
+    /// <summary>
+    /// The Suggestion class represents a Suggestion object.
+    /// https://cds-hooks.hl7.org/1.0/#suggestion
+    /// </summary>
     public class Suggestion
     {
         [JsonProperty("label")]
@@ -73,6 +85,10 @@ namespace Model.CdsHooks.v1
         }
     }
 
+    /// <summary>
+    /// The Action class represents a Action object.
+    /// https://cds-hooks.hl7.org/1.0/#action
+    /// </summary>
     public class Action
     {
         [JsonProperty("type")]
@@ -98,6 +114,10 @@ namespace Model.CdsHooks.v1
         }
     }
 
+    /// <summary>
+    /// The Link class represents a Link object.
+    /// https://cds-hooks.hl7.org/1.0/#link
+    /// </summary>
     public class Link
     {
         [JsonProperty("label")]
