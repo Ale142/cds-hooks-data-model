@@ -2,8 +2,13 @@
 
 # cds-hooks-data-model
 
-A Data Model library for CDS Hooks written in C#
+A Data Model library for [CDS Hooks](https://cds-hooks.org/) written in C#!
 
----
+CDS Hooks version supported
+
+| Version | Supported          | Test               |
+| ------- | ------------------ | ------------------ |
+| 1.0     | :white_check_mark: | :white_check_mark: |
+| 2.0     | :construction:     | :construction:     |
 
 [LICENSE](./LICENSE)
